@@ -29,7 +29,7 @@ const portfolioData = {
       dateRange: 'Sep 2025 – Oct 2025'
     },
     {
-      name: 'Pop!_Os Cosmic',
+      name: 'Pop!_OS Cosmic',
       duration: '1 month',
       comments: 'COSMIC looked great and the tiling workflow felt excellent for productivity.',
       rating: 'A',
@@ -38,7 +38,7 @@ const portfolioData = {
     {
       name: 'OpenSuse (GNOME/KDE)',
       duration: '1 month',
-      comments: 'GNOME looked nice but felt harder to master; I also had Wi-Fi drops and Brave login resets.',
+      comments: 'GNOME looked nice but felt harder to master; on OpenSuse with GNOME, I also had Wi-Fi drops and Brave login resets.',
       rating: 'C',
       dateRange: 'Dec 2025'
     },
@@ -67,7 +67,7 @@ const portfolioData = {
     {
       name: 'GNOME',
       rating: 'F',
-      comments: 'Nice visual style, but harder to master than KDE. I had Wi-Fi disconnections and Brave login resets.',
+      comments: 'Nice visual style, but harder to master than KDE. On OpenSuse with GNOME, I had Wi-Fi disconnections and Brave login resets.',
       usedOn: 'OpenSuse'
     },
     {

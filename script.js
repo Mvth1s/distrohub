@@ -29,4 +29,4 @@
       `
     )
     .join('');
-})(window.portfolioData || portfolioData);
+})(window.portfolioData);
