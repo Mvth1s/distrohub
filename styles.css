@@ -187,11 +187,11 @@ h1 {
 
 .ascii-art {
   color: var(--green-d);
-  font-size: 0.75rem;
-  line-height: 1.25;
+  font-size: 0.38rem;
+  line-height: 1.1;
   flex-shrink: 0;
-  min-width: 130px;
-  text-shadow: 0 0 7px rgba(0, 200, 60, 0.5);
+  min-width: 200px;
+  text-shadow: 0 0 5px rgba(0, 200, 60, 0.45);
   user-select: none;
 }
 
