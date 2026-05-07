@@ -99,6 +99,14 @@ h1 {
   font-size: 0.85rem;
 }
 
+.rating-s { background: rgba(255, 215, 0, 0.2);  color: #ffd700; border-color: rgba(255, 215, 0, 0.5); }
+.rating-a { background: rgba(0, 210, 110, 0.2);  color: #00d26e; border-color: rgba(0, 210, 110, 0.5); }
+.rating-b { background: rgba(100, 200, 60, 0.2); color: #7ed43c; border-color: rgba(100, 200, 60, 0.5); }
+.rating-c { background: rgba(255, 200, 0, 0.2);  color: #ffc800; border-color: rgba(255, 200, 0, 0.5); }
+.rating-d { background: rgba(255, 130, 0, 0.2);  color: #ff8200; border-color: rgba(255, 130, 0, 0.5); }
+.rating-e { background: rgba(255, 70, 20, 0.2);  color: #ff4614; border-color: rgba(255, 70, 20, 0.5); }
+.rating-f { background: rgba(210, 30, 30, 0.2);  color: #d21e1e; border-color: rgba(210, 30, 30, 0.5); }
+
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--border);
@@ -128,6 +136,10 @@ th {
 
 td {
   color: #f0f4ff;
+}
+
+tr:last-child td {
+  border-bottom: none;
 }
 
 @media (max-width: 640px) {
