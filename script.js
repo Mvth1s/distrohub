@@ -152,6 +152,39 @@ function addInfoRow(parent, key, val) {
   parent.appendChild(row);
 }
 
+// Anime les cartes et les section-heads au scroll (IntersectionObserver)
+function observeEntrance() {
+  const loadedAt = Date.now();
+
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      // Stagger uniquement pour les cartes déjà visibles au chargement initial
+      if (Date.now() - loadedAt < 800) {
+        const cards = Array.from(document.querySelectorAll('.card'));
+        const idx   = cards.indexOf(el);
+        el.style.transitionDelay = `${idx * 70}ms`;
+      } else {
+        el.style.transitionDelay = '0ms';
+      }
+      el.classList.add('visible');
+      cardObserver.unobserve(el);
+    });
+  }, { threshold: 0.06 });
+
+  const headObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      headObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.card').forEach(el => cardObserver.observe(el));
+  document.querySelectorAll('.section-head').forEach(el => headObserver.observe(el));
+}
+
 // ── Render ──
 (function renderPortfolio(data) {
   const distroGrid = document.getElementById('distro-grid');
@@ -162,5 +195,6 @@ function addInfoRow(parent, key, val) {
   data.distroReviews.forEach(d => distroGrid.appendChild(buildCard(d, 'distros')));
   data.deRankings.forEach(d   => deGrid.appendChild(buildCard(d, 'de')));
 
+  observeEntrance();
   animateHero();
 })(portfolioData);
