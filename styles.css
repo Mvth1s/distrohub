@@ -223,19 +223,6 @@ h1 {
 
 .ival { color: var(--text); }
 
-.card-comment {
-  padding: 0.5rem 1.2rem;
-  border-top: 1px dashed var(--border);
-  color: var(--green-d);
-  font-size: 0.8rem;
-  font-style: italic;
-}
-
-.card-comment::before {
-  content: '# ';
-  color: var(--muted);
-  font-style: normal;
-}
 
 /* ── DE GRID ── */
 .de-grid {

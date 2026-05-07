@@ -121,17 +121,13 @@ function buildCard(entry, type) {
     info.appendChild(row);
   }
 
-  body.appendChild(info);
-  article.appendChild(body);
-
-  // ── Comment ──
   const comment = entry.comments ?? (type === 'distros' ? 'Testing in progress…' : null);
   if (comment) {
-    const commentEl = document.createElement('div');
-    commentEl.className = 'card-comment';
-    commentEl.textContent = comment;
-    article.appendChild(commentEl);
+    addInfoRow(info, 'comments', comment);
   }
+
+  body.appendChild(info);
+  article.appendChild(body);
 
   return article;
 }
