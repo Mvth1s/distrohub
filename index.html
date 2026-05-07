@@ -7,17 +7,18 @@
     <title>DistroHub | Linux Distro & DE Reviews</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
       <div class="container">
-        <p class="eyebrow">DistroHub</p>
-        <h1>Linux Distribution & Desktop Environment Reviews</h1>
-        <p class="intro">
-          These are my personal Linux experiences collected across 2025–2026 while testing different distributions and desktop environments.
-        </p>
+        <div class="hero-prompt" aria-hidden="true">
+          <span class="ph-user">user</span><span class="ph-at">@</span><span class="ph-host">distrohub</span><span class="ph-colon">:</span><span class="ph-path">~</span><span class="ph-dollar">$</span>&nbsp;<span id="hero-cmd" class="ph-cmd"></span>
+        </div>
+        <h1 id="hero-title"></h1>
+        <p class="intro" id="hero-intro"></p>
+        <span class="cursor" id="hero-cursor" aria-hidden="true"></span>
       </div>
     </header>
 
@@ -25,7 +26,7 @@
       <section aria-labelledby="distro-reviews-title" class="section">
         <div class="section-head">
           <h2 id="distro-reviews-title">Distro Reviews</h2>
-          <p>Hands-on notes with duration, date range, and rating.</p>
+          <p>$ cat distros/*.log | grep -E "name|duration|rating|comment"</p>
         </div>
         <div id="distro-grid" class="distro-grid" role="list"></div>
       </section>
@@ -33,23 +34,18 @@
       <section aria-labelledby="de-rankings-title" class="section">
         <div class="section-head">
           <h2 id="de-rankings-title">DE Rankings</h2>
-          <p>How each desktop environment felt in daily use.</p>
+          <p>$ ./rank-des --sort=rating --format=card</p>
         </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Desktop Environment</th>
-                <th scope="col">Rating</th>
-                <th scope="col">Comments</th>
-                <th scope="col">Used On</th>
-              </tr>
-            </thead>
-            <tbody id="de-table-body"></tbody>
-          </table>
-        </div>
+        <div id="de-grid" class="de-grid" role="list"></div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <span class="footer-prompt" aria-hidden="true">user@distrohub:~$</span>
+        <span class="footer-text">exit 0</span>
+      </div>
+    </footer>
 
     <script src="content-data.js"></script>
     <script src="script.js"></script>
