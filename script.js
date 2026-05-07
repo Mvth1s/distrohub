@@ -152,36 +152,110 @@ function addInfoRow(parent, key, val) {
   parent.appendChild(row);
 }
 
-// Anime les cartes et les section-heads au scroll (IntersectionObserver)
-function observeEntrance() {
-  const loadedAt = Date.now();
+// ── Animation terminale ligne par ligne ──
 
+function resetCard(card) {
+  const titlebar = card.querySelector('.card-titlebar');
+  const ascii    = card.querySelector('.ascii-art');
+  const rows     = card.querySelectorAll('.info-row');
+
+  if (titlebar) {
+    titlebar.style.transition = 'none';
+    titlebar.style.opacity    = '0';
+  }
+  if (ascii) {
+    ascii.style.transition = 'none';
+    ascii.style.clipPath   = 'inset(0 0 100% 0)';
+    ascii.style.opacity    = '1';
+  }
+  rows.forEach(row => {
+    row.style.transition  = 'none';
+    row.style.opacity     = '0';
+    row.style.transform   = 'translateX(-8px)';
+  });
+}
+
+function animateCardIn(card) {
+  resetCard(card);
+
+  // Double rAF pour que le reset soit peint avant de lancer les transitions
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    const titlebar = card.querySelector('.card-titlebar');
+    const ascii    = card.querySelector('.ascii-art');
+    const rows     = card.querySelectorAll('.info-row');
+
+    if (titlebar) {
+      titlebar.style.transition      = 'opacity 0.12s ease';
+      titlebar.style.transitionDelay = '0ms';
+      titlebar.style.opacity         = '1';
+    }
+
+    if (ascii) {
+      ascii.style.transition      = 'clip-path 0.55s ease';
+      ascii.style.transitionDelay = '80ms';
+      ascii.style.clipPath        = 'inset(0 0 0% 0)';
+    }
+
+    rows.forEach((row, i) => {
+      const delay = 140 + i * 70;
+      row.style.transition      = 'opacity 0.18s ease, transform 0.18s ease';
+      row.style.transitionDelay = `${delay}ms`;
+      row.style.opacity         = '1';
+      row.style.transform       = 'translateX(0)';
+    });
+  }));
+}
+
+function animateCardOut(card) {
+  const titlebar = card.querySelector('.card-titlebar');
+  const ascii    = card.querySelector('.ascii-art');
+  const rows     = card.querySelectorAll('.info-row');
+
+  const hide = el => {
+    if (!el) return;
+    el.style.transition      = 'opacity 0.15s ease';
+    el.style.transitionDelay = '0ms';
+    el.style.opacity         = '0';
+  };
+
+  hide(titlebar);
+  rows.forEach(hide);
+
+  if (ascii) {
+    ascii.style.transition      = 'clip-path 0.25s ease';
+    ascii.style.transitionDelay = '0ms';
+    ascii.style.clipPath        = 'inset(0 0 100% 0)';
+  }
+}
+
+function observeEntrance() {
   const cardObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      // Stagger uniquement pour les cartes déjà visibles au chargement initial
-      if (Date.now() - loadedAt < 800) {
-        const cards = Array.from(document.querySelectorAll('.card'));
-        const idx   = cards.indexOf(el);
-        el.style.transitionDelay = `${idx * 70}ms`;
-      } else {
-        el.style.transitionDelay = '0ms';
+      const rect = entry.boundingClientRect;
+      if (entry.isIntersecting) {
+        animateCardIn(entry.target);
+      } else if (rect.top > 0) {
+        // Carte sous le viewport → l'utilisateur est remonté : efface
+        animateCardOut(entry.target);
       }
-      el.classList.add('visible');
-      cardObserver.unobserve(el);
+      // Carte au-dessus du viewport (déjà scrollée) → on ne touche pas
     });
-  }, { threshold: 0.06 });
+  }, { threshold: 0.05 });
 
   const headObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('visible');
-      headObserver.unobserve(entry.target);
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else if (entry.boundingClientRect.top > 0) {
+        entry.target.classList.remove('visible');
+      }
     });
   }, { threshold: 0.2 });
 
-  document.querySelectorAll('.card').forEach(el => cardObserver.observe(el));
+  document.querySelectorAll('.card').forEach(card => {
+    resetCard(card);
+    cardObserver.observe(card);
+  });
   document.querySelectorAll('.section-head').forEach(el => headObserver.observe(el));
 }
 

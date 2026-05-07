@@ -155,15 +155,7 @@ h1 {
   background: var(--bg-card);
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 80, 20, 0.15);
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.45s ease, transform 0.45s ease,
-              box-shadow 0.25s, border-color 0.25s;
-}
-
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
+  transition: box-shadow 0.25s, border-color 0.25s;
 }
 
 .card:hover {
