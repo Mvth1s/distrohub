@@ -42,7 +42,7 @@ const portfolioData = {
       slug: 'fedora-kde',
       name: 'Fedora 43 KDE',
       duration: '~1.5 months',
-      comments: 'Polished, complete, and secure KDE experience with good defaults.',
+      comments: "Simple, fast setup thanks to the built-in installer. Stability sits somewhere between Ubuntu and Arch's rolling release — solid, though updating through Discover broke the kernel a couple of times before I learned to avoid it and stick to terminal updates. Great performance on a freshly built rig with recent, powerful components, running 2K gaming. AI picked the right gaming drivers without me even realizing it. Discover makes package installs more approachable, but the terminal is still the better route. KDE keeps it consistent with Arch. Overall: more stable and secure than Arch, and a great all-rounder without a steep learning curve.",
       rating: 'A',
       dateRange: 'Dec 2025 – mid-Jan 2026',
       ascii: `                                                            
