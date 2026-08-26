@@ -13,13 +13,13 @@ A static single-page site documenting my hands-on experience with various Linux 
 |---|---|---|
 | Archlinux + KDE | A | Jul 2025 – Dec 2025 |
 | Fedora 43 KDE | A | Dec 2025 – mid-Jan 2026 |
+| Endeavour OS + KDE | A | May 2026 – present |
 | Debian + KDE (X11) | B | Jan 2026 – Feb 2026 |
-| Pop!_OS (Cosmic) | B | mid-Feb 2026 – present |
-| Manjaro + XFCE | B | Apr 2026 |
-| OpenSuse + KDE | C | Mar 2026 |
+| Pop!_OS (Cosmic) | B | mid-Feb 2026 – Aug 2026 |
+| OpenSuse | B | Mar 2026 |
+| Fedora 44 Workstation | B | Aug 2026 – present |
 | CachyOS + KDE | C | mid-Jan 2026 – Feb 2026 |
-| OpenSuse + GNOME | D | Mar 2026 |
-| Endeavour OS + KDE | — | May 2026 – present |
+| Manjaro + XFCE | C | Apr 2026 |
 
 ### DE Rankings
 | DE | Rating |
@@ -27,7 +27,7 @@ A static single-page site documenting my hands-on experience with various Linux 
 | KDE Plasma | S |
 | COSMIC | A |
 | XFCE | B |
-| GNOME | F |
+| GNOME | B |
 
 ---
 
