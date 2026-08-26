@@ -191,49 +191,11 @@ const portfolioData = {
                       ..:---====---:..                      `
     },
     {
-      slug: 'opensuse-gnome',
-      name: 'OpenSuse + GNOME',
-      duration: '3 days',
-      comments: 'Hard to judge on such a short run, especially coming from KDE. Lots of issues: wrong gaming drivers, Brave and Proton apps not saving logins.',
-      rating: 'D',
-      dateRange: 'Mar 2026',
-      ascii: `                      ..:-========-:..                      
-                 ..:--================--:..                 
-              .:-====-:::..........::--====-:.              
-           .-===--:.                    .:-====-.           
-         :-===:.                            .-===-:         
-       .-==-:                                 .:===-.       
-      -===:     -==---:::...                     :===:      
-    .-=====--::.=============--:::..              .-==-.    
-   .================================--:..           -==-.   
-  .-===========================-:....::-=-:          -==-.  
-  -==========================:. .::::.  .-=-.         -==-  
- .==========================:  :==--:--:  -==.        .===. 
- -=========================-  -===.   :=. .===.        -==- 
- ==========================-  :====--===. .===-        :==- 
- ==================::-======:  :-=====-.  -====:       :==- 
- ==================-. .:-====-.  ....   :-======.      -==- 
- -==================-.    .:-==--:::::-=======-:       -==- 
- :====================--:.    ..::---=----::.         :===: 
- .-========================--:..           ..:--     .-==-  
-  :==============================---:::---====-.     -===:  
-   :======================================-::.      -===:   
-   .:==============================---::.         .-===:    
-     :-====:.    ........:::......              .-===-:     
-      .-====:.                                .:===-:.      
-       .:--===-:.                          .:-===--.        
-         .::-====-:.                    .:-====-:..         
-           ..:--=====--:::.........::--=====-::.            
-              ..::----================----:...              
-                  ...:::::--------::::....                  
-                       ...::::::::..                        `
-    },
-    {
-      slug: 'opensuse-kde',
-      name: 'OpenSuse + KDE',
-      duration: '1 month',
-      comments: "Much better than with GNOME. More frequent releases than Arch — daily Discover notifications. Comes with bloat, but manageable thanks to KDE.",
-      rating: 'C',
+      slug: 'opensuse-gnome-kde',
+      name: 'OpenSuse',
+      duration: '~1 month',
+      comments: "Rough start on GNOME — recurring Wi-Fi password prompts on every connection, and having to re-log into accounts on every site got old fast. Both issues disappeared after switching to KDE. Otherwise similar to the other distros: just a different package manager name, and less mainstream than Arch, Fedora, or Ubuntu. Rolling release, with kernel updates through Discover working without issues, and RPM installs like Fedora plus extra security on top. A genuinely good distro let down by a bad first impression — worth retesting starting directly on KDE as the main DE for a fairer verdict.",
+      rating: 'B',
       dateRange: 'Mar 2026',
       ascii: `                      ..:-========-:..                      
                  ..:--================--:..                 
