@@ -80,7 +80,7 @@ const portfolioData = {
       slug: 'cachyos-kde',
       name: 'CachyOS + KDE',
       duration: '1 month',
-      comments: "Decent but overhyped — I think plain Arch is simply better.",
+      comments: "Arch, but easier — a proper installer and gaming drivers already set up out of the box. KDE keeps it otherwise identical to Arch. The custom performance-tuned kernel is the headline feature, but I didn't notice any more performance than gaming on Fedora, so I'm mixed on the hype. The real win is everything being pre-configured for gaming — drivers installed, custom kernel, no manual tuning needed.",
       rating: 'C',
       dateRange: 'mid-Jan 2026 – Feb 2026',
       ascii: `                                                            
