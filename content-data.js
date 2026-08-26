@@ -232,8 +232,8 @@ const portfolioData = {
       slug: 'manjaro-xfce',
       name: 'Manjaro + XFCE',
       duration: '1 month',
-      comments: "Essentially Arch-based: simple and efficient. Slightly behind Arch due to testing phases. Downside: ~2-min boot time and I didn't want to risk breaking things by tinkering.",
-      rating: 'B',
+      comments: "Similar to the other Arch-based distros overall: simple and efficient, just slightly behind Arch due to its testing phases before packages land. XFCE itself is fairly particular and lightweight — not a DE I'd pick again since I prefer KDE, but it's a great fit for an older PC. Downside: ~2-min boot time, and I didn't want to risk breaking things by tinkering. Having a fairly stable Arch-based distro with a 'fake' rolling release and a light DE is perfect for older hardware.",
+      rating: 'C',
       dateRange: 'Apr 2026',
       ascii: `                                                            
                                                             
