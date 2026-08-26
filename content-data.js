@@ -270,8 +270,8 @@ const portfolioData = {
       slug: 'endeavouros-kde',
       name: 'Endeavour OS + KDE',
       duration: 'Ongoing',
-      comments: null,
-      rating: null,
+      comments: "Arch, but better for me — comes with a graphical installer and a basic firewall enabled out of the box. Everything else lines up with Arch: same benefits (light, no bloat, KDE keeping it Windows-familiar), same drawbacks (steep learning curve, package management still means living in the terminal), same occasional rough edges.",
+      rating: 'A',
       dateRange: 'May 2026 – present',
       ascii: `                                                            
                                                             
