@@ -4,7 +4,7 @@ const portfolioData = {
       slug: 'archlinux-kde',
       name: 'Archlinux + KDE',
       duration: '~6 months',
-      comments: 'Light, simple, no bloat — my preferred setup overall.',
+      comments: 'Steep learning curve for a beginner, even with a guide — broke the install twice before landing on something stable, but rock solid once set up. Excellent performance on an aging 8GB RAM / 8th-gen CPU laptop. archinstall pulls in only base drivers. Package management means living in the terminal. KDE keeps it Windows-familiar. Light, no bloat, simple — just a real learning curve.',
       rating: 'A',
       dateRange: 'Jul 2025 – Dec 2025',
       ascii: `                             ..                             
