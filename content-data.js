@@ -303,6 +303,44 @@ const portfolioData = {
                                                             
                                                             
                                                             `
+    },
+    {
+      slug: 'fedora44-workstation',
+      name: 'Fedora 44 Workstation',
+      duration: 'Ongoing',
+      comments: "Replaced Pop!_OS on the secondary laptop starting early August 2026. Best overall compromise for general computing — security, well-timed releases, and performance all line up. GNOME suits a laptop better than a tower, and a handful of extensions make it a solid, usable desktop.",
+      rating: 'B',
+      dateRange: 'Aug 2026 – present',
+      ascii: `                                                            
+                             ..                             
+                   .:-=++**######**++=-:.                   
+               .:=*######################*=:.               
+             -+######################**######+-             
+          .=*##################*=-:.    .:=*###*=.          
+        .=*#################*=.            =+**##*=         
+       :*##################=.       ......-++++**##*:       
+      -###################-      :+*#####**++++++*###-      
+     =###################+     .+##########*++++++####=     
+    -####################-     =############*+++++*####-    
+   .*####################:     +############*+++++*####*.   
+   -#####################:     +############*+++++*#####-   
+   +#####################:     +##########*++++++*######+   
+   *##########***+--:::::.     .------=**+++++++*#######*   
+   *######***++++.                     -++++++*#########*   
+   *####**+++++++:                    .=++***###########+   
+   *###*++++++*****++++++.     =++++++**################-   
+  .###*+++++**###########:     +#######################*    
+  .###*+++++#############:     +#######################:    
+  .###+++++*#############:     +######################-     
+  .###*+++++############*      *####################*-      
+  .###*+++++**#########=.     -####################+.       
+  .####*+++++++===+==:.      -###################*-         
+  .#####**+++:             .+##################*-           
+   *######***-          .-+#################*=:             
+   :*#########+=-----=+*################*+-:                
+    .-+***************************++=-:.                    
+                                                            
+                                                            `
     }
   ],
   deRankings: [
@@ -347,7 +385,7 @@ const portfolioData = {
       slug: 'cosmic',
       name: 'COSMIC',
       rating: 'A',
-      comments: 'Very nice DE with excellent window tiling — better than GNOME for my workflow. Feels like Hyprland but polished.',
+      comments: "Excellent tiling — feels like Hyprland on a laptop. Some apps don't integrate well with the tiling shell, and moving windows across a second monitor gets annoying.",
       usedOn: 'Pop!_OS',
       ascii: `                                                            
                                                             
@@ -384,7 +422,7 @@ const portfolioData = {
       slug: 'xfce',
       name: 'XFCE',
       rating: 'B',
-      comments: 'Lightweight and pleasant with a unique taskbar. Settings feel a bit cluttered but the DE stays out of your way.',
+      comments: "Fairly particular and lightweight — a great fit for an older PC, though not a DE I'd pick again since I prefer KDE.",
       usedOn: 'Manjaro',
       ascii: `                                                            
                                                             
@@ -420,9 +458,9 @@ const portfolioData = {
     {
       slug: 'gnome',
       name: 'GNOME',
-      rating: 'F',
-      comments: 'Nice visual style, but harder to master than KDE. Major issues on OpenSuse: wrong gaming drivers, Brave and Proton apps not saving logins.',
-      usedOn: 'OpenSuse',
+      rating: 'B',
+      comments: "Needing to install extensions just to get basic functionality added gets old fast, and customization overall isn't nearly as deep as KDE's. That said, GNOME works well on a laptop.",
+      usedOn: 'OpenSuse, Fedora 44',
       ascii: `                        .:---==---:..                       
                   .:-=++++++++++++++++=-:.                  
               .-=++++++++++++++++++++++++++=-.              
