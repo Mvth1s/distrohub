@@ -310,7 +310,7 @@ const portfolioData = {
       slug: 'kde',
       name: 'KDE Plasma',
       rating: 'S',
-      comments: 'Very similar to Windows, easy to master, and highly customizable. My go-to DE.',
+      comments: "Very similar to Windows, easy to master, and highly customizable — consistent across every distro I've used it on. My go-to DE.",
       usedOn: 'Arch, Fedora, CachyOS, Debian, OpenSuse, Endeavour OS',
       ascii: `                                                            
                                                             
