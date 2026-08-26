@@ -155,10 +155,10 @@ const portfolioData = {
     {
       slug: 'popos-cosmic',
       name: 'Pop!_OS (Cosmic)',
-      duration: 'Ongoing',
-      comments: 'Good first impression. The tiling manager feels like Hyprland on a laptop — love it. Minor annoyance: had to run shell commands to get numpad numbers with Caps Lock.',
+      duration: '~5.5 months',
+      comments: "Good first impression. In short, it's Ubuntu with a much better, well-made desktop environment. Solid and stable in itself — got the job done for coursework: development, Linux sysadmin work, and SSHing into VMs. The tiling shell feels like Hyprland on a laptop — love it — though some apps don't integrate well with it, and moving windows across a second monitor gets annoying. Minor annoyance: had to run shell commands to get numpad numbers with Caps Lock.",
       rating: 'B',
-      dateRange: 'mid-Feb 2026 – present',
+      dateRange: 'mid-Feb 2026 – Aug 2026',
       ascii: `                      ..:----==----:..                      
                  .::--================--::.                 
              .:--==========================--:.             
