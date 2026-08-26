@@ -118,7 +118,7 @@ const portfolioData = {
       slug: 'debian-kde',
       name: 'Debian + KDE (X11)',
       duration: '~1 month',
-      comments: "Didn't use it long enough, but it gets the job done as a stable secondary machine. The laptop was often off, hard to test properly.",
+      comments: "Didn't use it long enough, but it gets the job done as a stable secondary machine. The laptop was often off, hard to test properly. Debian is noticeably heavier than Arch — animations and navigation felt the difference. Installation is a bit particular and needs some baseline knowledge, but very stable once set up.",
       rating: 'B',
       dateRange: 'Jan 2026 – Feb 2026',
       ascii: `                      .:-=+******+=-:.                      
